@@ -225,7 +225,7 @@ h1.not_found
 	width: 990px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 38px 0;
+	padding: 20px 0; /*ACA CAMBIAMOS DE 38 A 20*/
 }
 .header_left
 {
@@ -926,7 +926,7 @@ a.social_icon:hover
 {
 	margin-top: -577px;
 	min-height: 367px;
-	position: relative;
+	position: absolute; /*aca estaba el problema*/
 }
 .slider_content
 {
