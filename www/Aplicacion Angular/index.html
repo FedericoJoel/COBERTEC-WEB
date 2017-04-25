@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app='Cartilla' lang="en">
+  	<head>
+		<meta charset="utf-8">
+		<!-- Cargo dependencias proyecto angular -->
+		<script src="js/libraries/angular.min.js"></script>
+		<script src="js/libraries/angular-ui-router.min.js"></script>
+		<script src="js/controllers.js"></script>
+		<script src="js/routes.js"></script>
+
+	</head>
+
+    <body>
+		<div id="main">
+            <a ui-sref="listado">hola</a>
+            <a ui-sref="mapa">chau</a>
+            <div ui-view></div>
+        </div>
+    </body>
+  </html>

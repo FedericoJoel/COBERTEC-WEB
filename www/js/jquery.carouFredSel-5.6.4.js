@@ -4,7 +4,7 @@
  *	caroufredsel.frebsite.nl
  *	
  *	Copyright (c) 2012 Fred Heusschen
- *	www.frebsite.nl
+ *	www.frebsite.nlangular.module('Cartilla', ['ui.router']);
  *
  *	Dual licensed under the MIT and GPL licenses.
  *	http://en.wikipedia.org/wiki/MIT_License
