@@ -7,3 +7,9 @@ angular.module('Cartilla.controllers',[])
 	.controller('mapaCtrl', function($scope) {
 		$scope.mensaje = 'SOS UN PUTO DE MIERDA CHAU';
 	})
+
+	.controller('filtroCtrl', function($scope,$log) {
+		$scope.mostrar =  function(){
+        	alert($scope.fede);    
+        }
+	})

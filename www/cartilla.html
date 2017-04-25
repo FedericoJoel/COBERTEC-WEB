@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+	
+<html ng-app='Cartilla' lang="en">
+	<head>
+		<title>MediCenter - Medical Health Template</title>
+		<!--meta-->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="keywords" content="Medic, Medical Center" />
+		<meta name="description" content="Responsive Medical Health Template" />
+		<!--style-->
+		<link href='//fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+		<link href='//fonts.googleapis.com/css?family=Volkhov:400italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="style/reset.css" />
+		<link rel="stylesheet" type="text/css" href="style/superfish.css" />
+		<link rel="stylesheet" type="text/css" href="style/fancybox/jquery.fancybox.css" />
+		<link rel="stylesheet" type="text/css" href="style/jquery.qtip.css" />
+		<link rel="stylesheet" type="text/css" href="style/jquery-ui-1.9.2.custom.css" />
+		<link rel="stylesheet" type="text/css" href="style/style.css" />
+		<link rel="stylesheet" type="text/css" href="style/responsive.css" />
+		<link rel="stylesheet" type="text/css" href="style/animations.css" />
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<!--js template-->
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ba-bbq.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.carouFredSel-5.6.4-packed.js"></script>
+		<script type="text/javascript" src="js/jquery.sliderControl.js"></script>
+		<script type="text/javascript" src="js/jquery.timeago.js"></script>
+		<script type="text/javascript" src="js/jquery.hint.js"></script>
+		<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+		<script type="text/javascript" src="js/jquery.isotope.masonry.js"></script>
+		<script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.js"></script>
+		<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="js/jquery.blockUI.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+
+	    <!-- REFERENCIAS JS -->
+	    <script src="js/libraries/angular.min.js"></script>
+	    <script src="js/libraries/angular-ui-router.min.js"></script>
+	    <script src="js/app/routes.js"></script>
+			<script src="js/app/controllers.js"></script>
+
+			<!-- REFERENCIAS BOOTSTRAP -->
+			<link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+
+	</head>
+	
+	<body ng-app="Cartilla" ng-controller="filtroCtrl">
+		<div class="site_container">
+			<div class="header_container">
+				<div class="header clearfix">
+					<div class="header_left">
+						<a href="home.html" title="MEDICENTER">
+							<img src="images/header_logo.png" alt="logo" />
+							<span class="logo">medicenter</span>
+						</a>
+					</div>
+					<ul class="sf-menu header_right">
+						<li class="submenu">
+							<a href="#" title="HOME">
+								HOME
+							</a>
+						<li class="submenu">
+							<a href="#" title="Blog">
+								BLOG
+							</a>
+						</li>
+						<li class="submenu selected">
+							<a href="#" title="PAGES">
+								PAGES
+							</a>
+						</li>
+						<li>
+							<a href="contact.html" title="CONTACT">
+								CONTACT
+							</a>
+						</li>
+					</ul>
+					<div class="mobile_menu">
+						<select>
+							<option value="home.html">HOME</option>
+							<option value="blog.html">BLOG</option>
+							<option value="about.html">PAGES</option>
+							<option value="contact.html">CONTACT</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="page relative">
+				<div class="page_layout page_margin_top clearfix">
+					<div class="page_header clearfix">
+						<div class="page_header_left">
+							<h1 class="page_title">Cartilla</h1>
+							<ul class="bread_crumb">
+								<li>
+									<a href="home.html" title="Home">
+										Home
+									</a>
+								</li>
+								<li class="separator icon_small_arrow right_gray">
+									&nbsp;
+								</li>
+								<li>
+									Our Doctors
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- CONTENIDO -->
+					<div class="clearfix">
+						<div id="main">
+
+							<!-- BUTTON GROUP -->
+							<input type="text" name="" ng-model="fede">
+							<button type="button" class="button" ng-click="mostrar();">fede</button>
+							<div class="btn-group btn-group-justified" role="grupo" aria-label="bottonbar">
+  								<a type="button" class="btn btn-primary" ui-sref="listado">Listado</a>
+  								<a type="button" class="btn btn-primary" ui-sref="mapa">Mapa</a>
+							</div>
+	            			<div ui-view></div>
+            			</div>
+					</div>
+				</div>
+			</div>
+			
+
+			<div class="footer_container">
+				<div class="footer">
+					<ul class="footer_banner_box_container clearfix">
+						<li class="footer_banner_box super_light_blue animated_element animation-fadeIn duration-500">
+							<h2>
+								Health Insurance
+							</h2>
+							<p>
+								<a class="icon_small_arrow right_white" href="#">Here in medicenter we have individual</a>
+							</p>
+						</li>
+						<li class="footer_banner_box light_blue animated_element animation-slideRight duration-800 delay-250">
+							<h2>
+								Medical Records
+							</h2>
+							<p>
+								<a class="icon_small_arrow right_white" href="#">Here in medicenter we have individual</a>
+							</p>
+						</li>
+						<li class="footer_banner_box blue animated_element animation-slideRight200 duration-800 delay-500">
+							<h2>
+								Online Bill Pay
+							</h2>
+							<p>
+								<a class="icon_small_arrow right_white" href="#">Here in medicenter we have individual</a>
+							</p>
+						</li>
+					</ul>
+					<div class="footer_box_container clearfix">
+						<div class="footer_box">
+							<h3 class="box_header">
+								Medicenter Clinic
+							</h3>
+							<p class="info">
+								Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada individual.
+							</p>
+							<ul class="footer_contact_info_container clearfix">
+								<li class="footer_contact_info_row">
+									<div class="footer_contact_info_left">
+										Medicenter Clinic
+									</div>
+								</li>
+								<li class="footer_contact_info_row">
+									<div class="footer_contact_info_left">
+										33 Farlane Street
+									</div>
+									<div class="footer_contact_info_right">
+										+123 655 655
+									</div>
+								</li>
+								<li class="footer_contact_info_row">
+									<div class="footer_contact_info_left">
+										Keilor East
+									</div>
+									<div class="footer_contact_info_right">
+										+123 755 755
+									</div>
+								</li>
+								<li class="footer_contact_info_row">
+									<div class="footer_contact_info_left">
+										VIC 3033, Australia
+									</div>
+									<div class="footer_contact_info_right">
+										<a href="mailto:medicenter@mail.com" title="Send Email">
+											medicenter@mail.com
+										</a>
+									</div>
+								</li>
+							</ul>
+							<ul class="social_icons clearfix">
+								<li>
+									<a class="social_icon facebook" href="http://facebook.com/QuanticaLabs" title="" target="_blank">
+										&nbsp;
+									</a>
+								</li>
+								<li>
+									<a class="social_icon twitter" href="https://twitter.com/QuanticaLabs" title="" target="_blank">
+										&nbsp;
+									</a>
+								</li>
+								<li>
+									<a class="social_icon googleplus" href="#" title="">
+										&nbsp;
+									</a>
+								</li>
+								<li>
+									<a class="social_icon mail" href="mailto:medicenter@mail.com" title="">
+										&nbsp;
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer_box">
+							<div class="clearfix">
+								<div class="header_left">
+									<h3 class="box_header">
+										Latest Posts
+									</h3>
+								</div>
+								<div class="header_right">
+									<a href="#" id="footer_recent_posts_prev" class="scrolling_list_control_left icon_small_arrow left_white"></a>
+									<a href="#" id="footer_recent_posts_next" class="scrolling_list_control_right icon_small_arrow right_white"></a>
+								</div>
+							</div>
+							<div class="scrolling_list_wrapper">
+								<ul class="scrolling_list footer_recent_posts">
+									<li class="icon_small_arrow right_white">
+										<a href="post.html">
+											Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.
+										</a>
+										<abbr title="29 May 2012" class="timeago">29 May 2012</abbr>
+									</li>
+									<li class="icon_small_arrow right_white">
+										<a href="post.html">
+											Lorem ipsum dolor sit amat velum.
+										</a>
+										<abbr title="04 Apr 2012" class="timeago">04 Apr 2012</abbr>
+									</li>
+									<li class="icon_small_arrow right_white">
+										<a href="post.html">
+											Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.
+										</a>
+										<abbr title="02 Feb 2012" class="timeago">02 Feb 2012</abbr>
+									</li>
+									<li class="icon_small_arrow right_white">
+										<a href="post.html">
+											Lorem ipsum dolor sit amat velum, consectetur adipiscing elit.
+										</a>
+										<abbr title="24 Jan 2011" class="timeago">24 Jan 2011</abbr>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer_box last">
+							<div class="clearfix">
+								<div class="header_left">
+									<h3 class="box_header">
+										Latest Tweets
+									</h3>
+								</div>
+								<div class="header_right">
+									<a href="#" id="latest_tweets_prev" class="scrolling_list_control_left icon_small_arrow left_white"></a>
+									<a href="#" id="latest_tweets_next" class="scrolling_list_control_right icon_small_arrow right_white"></a>
+								</div>
+							</div>
+							<div class="scrolling_list_wrapper">
+								<ul class="scrolling_list latest_tweets">
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="copyright_area clearfix">
+						<div class="copyright_left">
+							© Copyright - <a href="http://themeforest.net/item/medicenter-responsive-medical-health-template/4000598?ref=QuanticaLabs" title="MediCenter Template" target="_blank">MediCenter Template</a> by <a href="http://quanticalabs.com" title="QuanticaLabs" target="_blank">QuanticaLabs</a>
+						</div>
+						<div class="copyright_right">
+							<a class="scroll_top icon_small_arrow top_white" href="#top" title="Scroll to top">Top</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<!-- BOOTSTRAP DEPENDENCIAS -->
+    <script src="../js/libraries/1.11.2.jquery.min.js"></script>
+    <script src="../js/libraries/bootstrap.min.js"></script>
+	</body>
+</html>
