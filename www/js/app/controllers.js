@@ -5,13 +5,15 @@ angular.module('Cartilla.controllers',['uiGmapgoogle-maps'])
 	})
 
 	.controller('mapaCtrl', function($scope) {
+		
+		$scope.map = {center: {latitude: -34.5991567, longitude: -58.369587499999966 }, zoom: 12, bounds: {}};
 		$scope.mensaje = 'SOS UN PUTO DE MIERDA CHAU';
+	
+	
 	})
 
 	.controller('filtroCtrl', function($scope,$log) {
 		$scope.mostrar =  function(){
         	alert($scope.fede);    
         }
-
-        $scope.map = {center: {latitude: 40.1451, longitude: -99.6680 }, zoom: 4, bounds: {}};
 	})

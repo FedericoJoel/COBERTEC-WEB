@@ -153,20 +153,12 @@
 					<div class="clearfix">
 						<div id="main">
 
-							<!-- MAPS -->
-
-							<div id="map_canvas" style="width:400px; height: 400px;">
-						    <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options" bounds="map.bounds">
-							</div>
-
 							<!-- BUTTON GROUP -->
-							<input type="text" name="" ng-model="fede">
-							<button type="button" class="button" ng-click="mostrar();">fede</button>
 							<div class="btn-group btn-group-justified" role="grupo" aria-label="bottonbar">
   								<a type="button" class="btn btn-primary" ui-sref="listado">Listado</a>
   								<a type="button" class="btn btn-primary" ui-sref="mapa">Mapa</a>
 							</div>
-	            			<div ui-view></div>
+	            			<div ui-view style="height:400px;"></div>
             			</div>
 					</div>
 				</div>
