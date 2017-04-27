@@ -1,4 +1,4 @@
-var app = angular.module('Cartilla', ['ui.router','Cartilla.controllers']);
+var app = angular.module('Cartilla', ['ui.router','Cartilla.controllers','uiGmapgoogle-maps']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 

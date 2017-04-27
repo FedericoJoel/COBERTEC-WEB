@@ -44,8 +44,33 @@
 	    <script src="js/app/routes.js"></script>
 			<script src="js/app/controllers.js"></script>
 
-			<!-- REFERENCIAS BOOTSTRAP -->
-			<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- REFERENCIAS BOOTSTRAP -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- REFERENCIAS MAPS -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+    	<script src="http://rawgit.com/angular-ui/angular-google-maps/2.0.X/dist/angular-google-maps.js"></script>
+    	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4-eeKQmqWqcPqEhOY3DyYDCfNLZA_kXE""></script>
+
+    	<style type="text/css">
+        html, body, #map_canvas {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+        }
+
+        #map_canvas {
+            position: relative;
+        }
+
+        .angular-google-map-container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+    	</style>
 
 
 
@@ -116,6 +141,15 @@
 					<!-- CONTENIDO -->
 					<div class="clearfix">
 						<div id="main">
+
+							<!-- MAPS -->
+
+							<div id="map_canvas" style="width:400px; height: 400px;">
+						    <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options" bounds="map.bounds">
+						    <ui-gmap-polygon static="true" ng-repeat="p in polygons track by p.id" path="p.path" stroke="p.stroke" visible="p.visible"
+						    geodesic="p.geodesic" fill="p.fill" fit="false" editable="p.editable" draggable="p.draggable"></ui-gmap-polygon>
+						    </ui-gmap-google-map>
+							</div>
 
 							<!-- BUTTON GROUP -->
 							<input type="text" name="" ng-model="fede">
