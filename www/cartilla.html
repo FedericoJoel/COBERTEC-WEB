@@ -49,6 +49,10 @@
 		<script src="js/app/controllers.js"></script>
 		<script src="js/app/services.js"></script>
 
+		<!-- REFERENCIAS NG-TABLE -->
+		<link rel="stylesheet"; href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
+		<script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
+
 		<!-- REFERENCIAS MAPS -->
 		<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
 		<script src="http://rawgit.com/angular-ui/angular-google-maps/2.0.X/dist/angular-google-maps.js"></script>
@@ -78,7 +82,7 @@
 
 	</head>
 	
-	<body ng-app="Cartilla" ng-controller="filtroCtrl">
+	<body ng-app="Cartilla" ng-controller="mainCtrl">
 		<div class="site_container">
 			<div class="header_container">
 				<div class="header clearfix">
@@ -157,7 +161,7 @@
 							<!-- BUTTON GROUP -->
 							<div class="btn-group btn-group-justified" role="grupo" aria-label="bottonbar">
   								<a type="button" class="btn btn-primary" ui-sref="listado">Listado</a>
-  								<a type="button" class="btn btn-primary" ui-sref="mapa">Mapa</a>
+  								<a type="button" class="btn btn-primary" ng-click="mostrarMapa();">Mapa</a>
 							</div>
 	            			<div ui-view style="height:400px;"></div>
             			</div>

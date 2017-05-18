@@ -1,4 +1,4 @@
-var app = angular.module('Cartilla', ['ui.router','Cartilla.controllers','uiGmapgoogle-maps']);
+var app = angular.module('Cartilla', ['ui.router','Cartilla.controllers','uiGmapgoogle-maps','ngTable']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
@@ -7,13 +7,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		.state('listado', {
 			url: "/listado",
 			templateUrl: "templates/listado.html",
-			controller: "listadoCtrl"
+			controller: "mainCtrl"
 		})
 
 		.state('mapa', {
 			url: "/mapa",
 			templateUrl: "templates/mapa.html",
-			controller: "mapaCtrl"
+			controller: "mainCtrl"
 		})
 
 	$urlRouterProvider.otherwise("/listado");
