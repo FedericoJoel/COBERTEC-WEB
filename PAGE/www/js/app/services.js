@@ -7,6 +7,7 @@ angular.module('Cartilla.services', [])
   var _lat;
   var _long;
   var _zoom
+  var clinicas;
 
     this.parseMarkers = function(array){
        	array.map(function(elem){
@@ -45,6 +46,13 @@ angular.module('Cartilla.services', [])
       }
     }
     
+    this.setClinicas = function(obj){
+        clinicas = obj;
+    }
+    
+    this.getClinicas= function(obj){
+      return clinicas;
+    }
     
 
 })

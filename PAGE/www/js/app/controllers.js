@@ -37,6 +37,7 @@ angular.module('Cartilla.controllers',['uiGmapgoogle-maps','Cartilla.services','
    						$scope.data = params.filter() ? $filter('filter')($scope.data, params.filter()) : $scope.data;
 							console.log("data");
 							console.log($scope.data);
+							parserSrv.setClinicas($scope.data);
 							parserSrv.setLatLongAvrg($scope.data);
    						$scope.data = $scope.data.slice((params.page() - 1) * params.count(), params.page() * params.count());
               return $scope.data;
@@ -55,7 +56,7 @@ angular.module('Cartilla.controllers',['uiGmapgoogle-maps','Cartilla.services','
 			console.log(parserSrv.getLatitude());
 			console.log(parserSrv.getLongitude());
 			$scope.map = {center: {latitude: parserSrv.getLatitude(), longitude: parserSrv.getLongitude() }, zoom: 11, bounds: {}};
-			$scope.markers=$scope.data;
+			$scope.markers = parserSrv.getClinicas();
 			$state.go('mapa');
 		}
 		
