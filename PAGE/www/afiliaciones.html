@@ -9,6 +9,7 @@
 		<meta name="keywords" content="Medic, Medical Center" />
 		<meta name="description" content="Nos preocupamos por tu salud." />
 		<!--style-->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href='//fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 		<link href='//fonts.googleapis.com/css?family=Volkhov:400italic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="style/reset.css" />
@@ -113,11 +114,63 @@
 			<div class="page relative">
 				<div class="page_layout page_margin_top clearfix">
 
+					<div class="row">
+  					<div class="col-md-12">
+							<div class=" page_margin_top">
+								<ul >
+									<li class="home_box light_blue animated_element animation-fadeIn duration-500" style="width:100%;">
+										<h2>
+											<a>
+												Opcion de transpaso
+											</a>
+										</h2>
+										<div class="news clearfix">
+											<p class="text">
+												Si trabajás en relación de dependecia mensualmente se te descuenta un aporte del 3% que automaticamente se deriva para la obra social. Con ese mismo aporte podés solicitar el transpaso para COBERTEC y disfrutar de los beneficios que tenemos para brindarte a vos y a tu grupo familiar.
+											</p>
+										</div>
+									</li>
+									<li class="home_box blue animated_element animation-slideDown duration-800 delay-250" style="width:100%;">
+										<h2>
+											<a href="timetable.html" title="Doctors Timetable">
+												Que necesitas para afiliarte?
+											</a>
+										</h2>
+										<div class="news clearfix">
+											<p class="text">
+												<b>Titular:</b> DNI y Ultimos 2 Recibos de sueldo.</br>
+												<b>Cónyuge o Concubino/a:</b> Certificado de matrimonio o concubinato , DNI y Constancia de cuil.</br>
+												<b>Hijos:</b> Certificado de nacimiento, DNI, Constancia de cuil.</br>
+												<b>Hijos de concubino o cónyuge:</b> Certificado de nacimiento, Documentacion que acredite la identidad del menor y certificacion de CODEM
+											</p>
+										</div>
+									</li>
+									<li class="home_box dark_blue animated_element animation-slideDown200 duration-800 delay-500" style="height:100%; width:100%;">
+										<h2>
+											Inicia tu tramite
+										</h2>
+										<div class="news clearfix">
+											<p class="text">
+												<b>1:</b> Solicitá un asesor comercial.</br>
+												<b>2:</b> Tené lista una copia de la documentación.</br>
+												<b>3:</b> Firmás los formularios que te damos.</br>
+												<b>4:</b> En poco tiempo se comunicarán de la Obra Social para continuar con el trámite de traspaso.</br>
+												<b>5:</b> Listo, ya sos parte de COBERTEC
+											</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</br>
+
+
 					<div class="clearfix">
 						<div class="page_margin_top clearfix">
 							<div>
 								<h3 class="box_header">
-									Escribinos
+									Afiliate, Escribinos y te llamamos.
 								</h3>
 								<form class="contact_form" id="contact_form" method="post" action="contact_form.php">
 									<fieldset class="left">
@@ -139,9 +192,9 @@
 										<div class="block">
 											<input class="text_input" type="text" name="last_name" value="" />
 										</div>
-										<label>Numero de carnet</label>
+										<label>DNI</label>
 										<div class="block">
-											<input class="text_input" type="text" name="social_security_number" value="" />
+											<input class="text_input" type="text" name="DNI" value="" />
 										</div>
 										<label>E-mail</label>
 										<div class="block">
@@ -149,12 +202,12 @@
 										</div>
 									</fieldset>
 									<fieldset style="clear:both;">
-										<label>Motivo</label>
+										<label>Aclaraciónes.</label>
 										<div class="block">
 											<textarea name="message"></textarea>
 										</div>
-										<input type="hidden" name="action" value="contact_form" />
-										<input type="submit" name="submit" value="Enviar" class="more blue" />
+										<input type="hidden" name="action" value="afiliar_form" />
+										<input type="submit" name="submit" value="Enviar" class="more blue" style="float:left;" />
 									</fieldset>
 								</form>
 							</div>
@@ -166,7 +219,7 @@
 			<div class="footer_container">
 				<div class="footer">
 					<ul class="footer_banner_box_container clearfix">
-						<li class="footer_banner_box super_light_blue animated_element animation-fadeIn duration-500">
+						<li class="footer_banner_box super_light_blue animated_element animation-fadeIn duration-500" style="box-sizing:content-box;">
 							<h2>
 								Sobre nosotros
 							</h2>
@@ -174,7 +227,7 @@
 								<a class="icon_small_arrow right_white" href="#">Conoce quienes somos</a>
 							</p>
 						</li>
-						<li class="footer_banner_box light_blue animated_element animation-slideRight duration-800 delay-250">
+						<li class="footer_banner_box light_blue animated_element animation-slideRight duration-800 delay-250" style="box-sizing:content-box;">
 							<h2>
 								Nuestra App
 							</h2>
@@ -182,7 +235,7 @@
 								<a class="icon_small_arrow right_white" href="#">Ingresa al portal de nuestra aplicacion</a>
 							</p>
 						</li>
-						<li class="footer_banner_box blue animated_element animation-slideRight200 duration-800 delay-500">
+						<li class="footer_banner_box blue animated_element animation-slideRight200 duration-800 delay-500" style="box-sizing:content-box;">
 							<h2>
 								Contacto
 							</h2>
@@ -198,21 +251,20 @@
 							</h3>
 							<ul class="footer_contact_info_container clearfix">
 								<li class="footer_contact_info_row">
-									<div class="footer_contact_info_left">
-										Sarmiento 640, 1°A, CABA (1041)
-									</div>
-									<div class="footer_contact_info_right">
-										4328-9002
-									</br>
-										11-5487-3868
+									<div class="footer_contact_info_left" style="width:400px">
+										Sarmiento 640, 1°A, CABA (1041). Buenos aires, Argentina
 									</div>
 								</li>
 								<li class="footer_contact_info_row">
-									<div class="footer_contact_info_left">
-										Buenos aires, Argentina
+									<br>
+									<div class="footer_contact_info_left" style="width:400px">
+										4328-9002
+										/ 11-5487-3868
 									</div>
-									<div class="footer_contact_info_right">
-										<a href="mailto:info@cobertec.com.ar" title="Send Email">
+									<br>
+									<br>
+									<div class="footer_contact_info_left">
+										<a href="mailto:info@cobertec.com.ar" title="Send Email" style="width:400px">
 											info@cobertec.com.ar
 										</a>
 									</div>
