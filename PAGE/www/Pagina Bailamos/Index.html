@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app='BailamosApp' lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HOE Responsive Bootstrap sidebar Menu</title>
+    <!-- Bootstrap -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900" rel="stylesheet" type="text/css">
+    <link href="css/hoe.css" rel="stylesheet">
+
+    <!-- REFERENCIAS JS -->
+    <script src="js/libraries/angular.min.js"></script>
+    <script src="js/libraries/angular-ui-router.min.js"></script>
+    <script src="js/routes.js"></script>
+	  <script src="js/controllers.js"></script>
+
+
+</head>
+
+<body>
+            <!-- SECCION PRINCIPAL -->
+            <section id="main-content">
+            	<div id="main">
+            		<a ui-sref="hola">hola</a>
+            		<a ui-sref="chau">chau</a>
+            		<div ui-view></div>
+            	</div>
+            </section>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/libraries/1.11.2.jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/libraries/bootstrap.min.js"></script>
+    <script src="js/libraries/hoe.js"></script>
+</body>
+
+</html>

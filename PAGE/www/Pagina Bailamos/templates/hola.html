@@ -1,0 +1,22 @@
+<div>
+
+<input type="Button" value="Traer Datos" ng-click="listar()">
+</div>
+
+
+
+
+
+<table>
+  <tr>
+    <td>Nombre</td>
+    <td>Direccion</td>
+  </tr>
+  <input style="" type="text" ng-model="filtro">
+  <tr ng-repeat="clinica in clinicas | filter:filtro">
+    <td>{{ clinica.NOMBRE }}</td>
+    <td>{{ clinica.DIRECCION }}</td>
+  </tr>
+</table>
+
+ESTE ES EL TEMPLATE HOLA
