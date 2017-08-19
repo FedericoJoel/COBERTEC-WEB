@@ -1,0 +1,16 @@
+<table ng-table="usersTable" class="table table-striped">
+   <tr ng-repeat="user in data">
+       <td data-title="'Nombre'" sortable="'NOMBRE'" filter="{ 'NOMBRE': 'text' }" >
+           {{user.NOMBRE}}
+       </td>
+       <td data-title="'Especialidad'" sortable="'ESPECIALIDAD'" filter="{ 'ESPECIALIDAD': 'text' }">
+           {{user.ESPECIALIDAD}}
+       </td>
+       <td data-title="'Direccion'" sortable="'DIRECCION'" filter="{ 'DIRECCION': 'text' }" >
+           {{user.DIRECCION}}
+       </td>
+       <td data-title="'Localidad'" sortable="'LOCALIDAD'" filter="{ 'LOCALIDAD': 'text' }" >
+           {{user.LOCALIDAD}}
+       </td>
+   </tr>
+</table>
