@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
+
+<html ng-app='Farmacias' lang="en">
 	<head>
 		<title>COBERTEC</title>
+
 		<!--meta-->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<meta name="format-detection" content="telephone=no" />
 		<meta name="keywords" content="Medic, Medical Center" />
 		<meta name="description" content="Nos preocupamos por tu salud." />
+
 		<!--style-->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href='//fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 		<link href='//fonts.googleapis.com/css?family=Volkhov:400italic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="style/reset.css" />
@@ -20,6 +24,7 @@
 		<link rel="stylesheet" type="text/css" href="style/responsive.css" />
 		<link rel="stylesheet" type="text/css" href="style/animations.css" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
+
 		<!--js-->
 		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
@@ -36,8 +41,48 @@
 		<script type="text/javascript" src="js/jquery.qtip.min.js"></script>
 		<script type="text/javascript" src="js/jquery.blockUI.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
+
+		<!-- REFERENCIAS JS -->
+		<script src="js/libraries/angular.min.js"></script>
+		<script src="js/libraries/angular-ui-router.min.js"></script>
+		<script src="js/app/routesFarmacias.js"></script>
+		<script src="js/app/controllersFarmacias.js"></script>
+		<script src="js/app/servicesFarmacias.js"></script>
+
+		<!-- REFERENCIAS NG-TABLE -->
+		<link rel="stylesheet"; href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
+		<script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
+
+		<!-- REFERENCIAS MAPS -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+		<script src="http://rawgit.com/angular-ui/angular-google-maps/2.0.X/dist/angular-google-maps.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4-eeKQmqWqcPqEhOY3DyYDCfNLZA_kXE"></script>
+
+    	<style type="text/css">
+        html, body, #map_canvas {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+        }
+
+        #map_canvas {
+            position: relative;
+        }
+
+        .angular-google-map-container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+    	</style>
+
+
+
 	</head>
-	<body>
+
+	<body ng-app="Farmacias" ng-controller="mainCtrl">
 
 		<!--LIVECHAT  -->
 		<!--Start of Tawk.to Script-->
@@ -58,12 +103,12 @@
 			<div class="header_container">
 				<div class="header clearfix">
 					<div class="header_left" style="float:none;">
-						<a href="home.html" title="COBERTEC" >
+						<a href="home.html" title="COBERTEC">
 							<img src="images/header_logo.png" alt="logo" style="width: 50%;" />
 						</a>
 					</div>
 					<ul class="sf-menu header_right" style="padding-top: 1.5%">
-						<li class="submenu selected">
+						<li class="submenu">
 							<a href="index.html" title="INICIO">
 								INICIO
 							</a>
@@ -81,13 +126,13 @@
 							</a>
 						</li>
 
-						<li class="submenu">
+						<li class="submenu selected">
 							<a href="cartilla.html" title="CARTILLA">
 								CARTILLA
 							</a>
 						</li>
 
-						<li class="submenu">
+						<li class="submenu selected">
 							<a href="farmacias.html" title="FARMACIAS">
 								FARMACIAS
 							</a>
@@ -99,7 +144,7 @@
 							</a>
 						</li>
 
-						<li class="submenu">
+						<li class ="submenu">
 							<a href="contact.html" title="CONTACTO">
 								CONTACTO
 							</a>
@@ -116,127 +161,68 @@
 					</div>
 				</div>
 			</div>
-			<!-- slider -->
-			<ul class="slider">
-				<li style="background-image: url('images/slider/img1.jpg');">
-					&nbsp;
-				</li>
-				<li style="background-image: url('images/slider/img2.jpg');">
-					&nbsp;
-				</li>
-			</ul>
-			<div class="page relative noborder">
-				<div class="top_hint">
-					EMERGENCIAS: 4203-4645
-				</div>
+			<div class="page relative">
+				<div class="page_layout page_margin_top clearfix">
+					<div class="page_header clearfix">
+						<div class="page_header_left">
+							<h1 class="page_title">Cartilla</h1>
+							<ul class="bread_crumb">
+								<li>
+									<a href="home.html" title="Home">
+										Home
+									</a>
+								</li>
+								<li class="separator icon_small_arrow right_gray">
+									&nbsp;
+								</li>
+								<li>
+									Our Doctors
+								</li>
+							</ul>
+						</div>
+					</div>
 
+					<!-- CONTENIDO -->
+					<div class="clearfix">
+						<div id="main">
 
-				<!-- slider content -->
-				<div class="slider_content_box clearfix">
-
-				</div>
-
-
-				<div class="clearfix">
-					<div class="columns clearfix no_width page_margin_top_section">
-						<ul class="column_left">
-							<li class="item_content clearfix">
-								<a class="features_image" href="#" title="">
-									<img src="images/features_large/atencion.png" alt="" class="animated_element animation-scale" />
-								</a>
-								<div class="text">
-									<b>Contamos con personal capacitado para atender sus necesidades las 24 hs.</b><br>
-									Nuestros afiliados, pueden acceder a cualquier información o servicio, por cualquier vía, ya sea telefónica, mailing, chat en vivo a través de la pagina y además por la app desde su celular. Creemos fervientemente que estar al servicio de  nuestro afiliado en cualquier momento de su vida, afianzara lazos creando una relación de continua mejora para ambas partes
-									<div class="item_footer clearfix">
-									</div>
-								</div>
-							</li>
-							<li class="item_content clearfix">
-								<a class="features_image" href="#" title="">
-									<img src="images/features_large/farmacia.png" alt="" class="animated_element animation-scale" />
-								</a>
-								<div class="text">
-									<b>Descuentos en Farmacias desde el 40%.</b><br>
-									También tendrán el beneficio de según corresponda del 40, 70 y hasta 100% en medicamentos, poseemos una de las redes de farmacias mas amplias, en todo CABA y GBA .
-									<div class="item_footer clearfix">
-									</div>
-								</div>
-							</li>
-							<li class="item_content clearfix">
-								<a class="features_image" href="#" title="">
-									<img src="images/features_large/gps.png" alt="" class="animated_element animation-scale" />
-								</a>
-								<div class="text">
-									<b>Cartilla Online Geografica</b><br>
-									Utiliza nuestra cartilla online para encontrá todas las opciones de atencion cerca, estés donde estés.
-									<div class="item_footer clearfix">
-									</div>
-								</div>
-							</li>
-						</ul>
-						<ul class="column_right">
-							<li class="item_content clearfix">
-								<a class="features_image" href="#" title="">
-									<img src="images/features_large/odontologo.png" alt="" class="animated_element animation-scale" />
-								</a>
-								<div class="text">
-									<b>Servicio completo de odontología, con aranceles preferenciales.</b><br>
-									Poseemos una amplia red odontológica, que permite cumplir con las necesidades de cualquier grupo familiar, a la medida de cada individuo.
-									<div class="item_footer clearfix">
-									</div>
-								</div>
-							</li>
-							<li class="item_content clearfix">
-								<a class="features_image" href="#" title="">
-									<img src="images/features_large/servicios.png" alt="" class="animated_element animation-scale" />
-								</a>
-								<div class="text">
-									<b>Ofrecemos servicios empresariales en forma gratuita. Psicologia Social y Counseling.</b><br>
-									Ofrecemos a las empresas, la posibilidad de alcanzar distintos objetivos en estrategias de liderazgo, convivencia y unificación de grupos.Sus empleados podran ser asesorados por profecionales en couseling y psicologia social con el fin de alcanzar las metas propuestas.
-									<div class="item_footer clearfix">
-									</div>
-								</div>
-							</li>
-							<li class="item_content clearfix">
-								<a class="features_image" href="#" title="">
-									<img src="images/features_large/tarjeta.png" alt="" class="animated_element animation-scale" />
-								</a>
-								<div class="text">
-									<b>Alianzase strategicas</b><br>
-									Tratando de ampliar y mejorar nuestro servicios a los afiliados hemos hecho alianzas con distintas instituciones para que ellos puedan ofrecer sus servicios independientemente de los nuestros, entérate aca.
-									<div class="item_footer clearfix">
-									</div>
-								</div>
-							</li>
-						</ul>
+							<!-- BUTTON GROUP -->
+							<div class="btn-group btn-group-justified" role="grupo" aria-label="bottonbar">
+  								<a type="button" class="btn btn-primary" ui-sref="listado">Listado</a>
+  								<a type="button" class="btn btn-primary" ng-click="mostrarMapa();">Mapa</a>
+							</div>
+	            			<div ui-view style="height:400px;"></div>
+            			</div>
 					</div>
 				</div>
 			</div>
+
+
 			<div class="footer_container">
 				<div class="footer">
 					<ul class="footer_banner_box_container clearfix">
-						<li class="footer_banner_box super_light_blue animated_element animation-fadeIn duration-500">
+						<li class="footer_banner_box super_light_blue animated_element animation-fadeIn duration-500" style="box-sizing:content-box;">
 							<h2>
 								Sobre nosotros
 							</h2>
 							<p>
-								<a class="icon_small_arrow right_white" href="about.html">Conoce quienes somos</a>
+								<a class="icon_small_arrow right_white" href="#">Conoce quienes somos</a>
 							</p>
 						</li>
-						<li class="footer_banner_box light_blue animated_element animation-slideRight duration-800 delay-250">
+						<li class="footer_banner_box light_blue animated_element animation-slideRight duration-800 delay-250" style="box-sizing:content-box;">
 							<h2>
 								Nuestra App
 							</h2>
 							<p>
-								<a class="icon_small_arrow right_white" href="http://app.cobertec.com.ar">Ingresa al portal de nuestra aplicacion</a>
+								<a class="icon_small_arrow right_white" href="#">Ingresa al portal de nuestra aplicacion</a>
 							</p>
 						</li>
-						<li class="footer_banner_box blue animated_element animation-slideRight200 duration-800 delay-500">
+						<li class="footer_banner_box blue animated_element animation-slideRight200 duration-800 delay-500" style="box-sizing:content-box;">
 							<h2>
 								Contacto
 							</h2>
 							<p>
-								<a class="icon_small_arrow right_white" href="contact.html">Ponete en contacto con nuestro equipo</a>
+								<a class="icon_small_arrow right_white" href="#">Ponete en contacto con nuestro equipo</a>
 							</p>
 						</li>
 					</ul>
@@ -247,21 +233,20 @@
 							</h3>
 							<ul class="footer_contact_info_container clearfix">
 								<li class="footer_contact_info_row">
-									<div class="footer_contact_info_left">
-										Sarmiento 640, 1°A, CABA (1041)
-									</div>
-									<div class="footer_contact_info_right">
-										4328-9002
-									</br>
-										11-5487-3868
+									<div class="footer_contact_info_left" style="width:400px">
+										Sarmiento 640, 1°A, CABA (1041). Buenos aires, Argentina
 									</div>
 								</li>
 								<li class="footer_contact_info_row">
-									<div class="footer_contact_info_left">
-										Buenos aires, Argentina
+									<br>
+									<div class="footer_contact_info_left" style="width:400px">
+										4328-9002
+										/ 11-5487-3868
 									</div>
-									<div class="footer_contact_info_right">
-										<a href="mailto:info@cobertec.com.ar" title="Send Email">
+									<br>
+									<br>
+									<div class="footer_contact_info_left">
+										<a href="mailto:info@cobertec.com.ar" title="Send Email" style="width:400px">
 											info@cobertec.com.ar
 										</a>
 									</div>
@@ -292,5 +277,9 @@
 				</div>
 			</div>
 		</div>
+
+	<!-- BOOTSTRAP DEPENDENCIAS -->
+    <script src="../js/libraries/1.11.2.jquery.min.js"></script>
+    <script src="../js/libraries/bootstrap.min.js"></script>
 	</body>
 </html>

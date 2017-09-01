@@ -1691,7 +1691,7 @@ a.social_icon:hover
 /* --- pagination --- */
 .pagination
 {
-	float: right;
+	float: left;
 }
 .pagination li
 {
@@ -1705,7 +1705,7 @@ a.social_icon:hover
 .pagination li a
 {
 	display: block;
-	height: 12px;
+	height: auto;
 	color: #666;
 	padding: 9px 11px 7px;
 	font-size: 11px;
