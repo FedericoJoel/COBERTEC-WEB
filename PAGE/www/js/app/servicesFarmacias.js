@@ -11,7 +11,8 @@ angular.module('Farmacias.services', [])
 
   this.parseMarkers = function(array){
       array.map(function(elem){
-        elem.id =  elem.IDCLI;
+        console.log("entro, el ID ES " + elem.ID);
+        elem.id =  elem.ID;
         //delete elem["0"];
         //delete elem["1"];
         //delete elem["2"];
