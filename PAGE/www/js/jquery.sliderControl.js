@@ -24,7 +24,7 @@
 				sliderControl.append("<li class='slider_bar' style='width:" + (100/self.children().length) + "%;'></li>");
 				$(this).children().each(function(index){
 					$(this).attr("id", "slide_" + expando + "_" + index);
-					sliderControl.append($("<li class='slider_control' style='width:" + (100/self.children().length) + "%;'><a id='" + $(this).attr("id") + "_control' href='#' title='" + (index+1) + "'><span class='top_border'></span><span class='slider_control_bar'></span>" + (index+1) + "</a>"));
+					sliderControl.append($("<li class='slider_control' style='width:" + (100/self.children().length) + "%;'><a id='" + $(this).attr("id") + "_control' href='#' title='" + (index+1) + "'><span class='top_border'></span><span class='slider_control_bar'></span></a>"));
 				});
 				if(options.appendTo=="")
 					self.after(sliderControl);

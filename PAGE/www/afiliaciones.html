@@ -58,7 +58,7 @@
 			<div class="header_container">
 				<div class="header clearfix">
 					<div class="header_left" style="float:none;">
-						<a href="home.html" title="COBERTEC" >
+						<a href="index.html" title="COBERTEC" >
 							<img src="images/header_logo.png" alt="logo" style="width: 50%;" />
 							<!-- <span class="logo">medicenter</span> -->
 						</a>
@@ -127,7 +127,7 @@
 									<li class="home_box light_blue animated_element animation-fadeIn duration-500" style="width:100%;">
 										<h2>
 											<a>
-												Opcion de transpaso
+												Opcion de traspaso
 											</a>
 										</h2>
 										<div class="news clearfix">
@@ -178,20 +178,23 @@
 								<h3 class="box_header">
 									Afiliate, Escribinos y te llamamos.
 								</h3>
-								<form class="contact_form" id="contact_form" method="post" action="contact_form.php">
+								<form class="contact_form" id="afiliar_form" method="post" action="afiliar_form.php">
 									<fieldset class="left">
 										<label>Nombre</label>
 										<div class="block">
 											<input class="text_input" name="first_name" type="text" value="" />
 										</div>
-										<label>Fecha de nacimiento (mm/dd/aaaa)</label>
+										
+										<label>Fecha de nacimiento</label>
 										<div class="block">
-											<input class="text_input" type="text" name="date_of_birth" value="" />
+											<input class="text_input" type="date" name="fecha_nacimiento" value="" />
 										</div>
+
 										<label>Telefono</label>
 										<div class="block">
-											<input class="text_input" name="phone_number" type="text" value="" />
+											<input class="text_input" name="tel" type="tel" value="" />
 										</div>
+
 									</fieldset>
 									<fieldset class="right">
 										<label>Apellido</label>
@@ -200,11 +203,11 @@
 										</div>
 										<label>DNI</label>
 										<div class="block">
-											<input class="text_input" type="text" name="DNI" value="" />
+											<input class="text_input" type="number" name="DNI" value="" />
 										</div>
 										<label>E-mail</label>
 										<div class="block">
-											<input class="text_input" type="text" name="email" value="" />
+											<input class="text_input" type="email" name="email" value="" />
 										</div>
 									</fieldset>
 									<fieldset style="clear:both;">
